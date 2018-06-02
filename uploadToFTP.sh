@@ -1,0 +1,9 @@
+#!/bin/bash
+HOST='YOURFTPHOST'
+USER='YOURFTPUSER'
+PASS='YOURFTPUSERPASSWORD'
+ftp -inv $HOST << EOF
+user $USER $PASS
+put $1
+exit 0
+EOF
