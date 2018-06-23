@@ -2,8 +2,9 @@
 HOST='YOURFTPHOST'
 USER='YOURFTPUSER'
 PASS='YOURFTPUSERPASSWORD'
-ftp -inv $HOST << EOF
+ftp -nv $HOST << EOF
 user $USER $PASS
+binary
 put $1
-exit 0
+bye
 EOF
